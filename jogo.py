@@ -2,7 +2,32 @@ import random
 import os
 
 """FUNÇÕES"""
+def desenha_trofeu():
+    print("\n\n")
+    print("         **********************       ")
+    print("      ***                      ***    ")
+    print("     *                            *   ")
+    print("     *                            *   ")
+    print("     *                            *   ")
+    print("      *                          *    ")
+    print("       *****                *****     ")
+    print("            *              *          ")
+    print("             *            *           ")
+    print("              *          *            ")
+    print("               *        *             ")
+    print("               *        *             ")
+    print("               *        *             ")
+    print("               *        *             ")
+    print("               *        *             ")
+    print("               *        *             ")
+    print("         *******         *******      ")
+    print("         *                     *      ")
+    print("         *                     *      ")
+    print("         *                     *      ")
+    print("         ***********************      ")
+    
 def desenha_caveira():
+    print("\n\n")
     print("             **********************                 ")
     print("            *                      *                ")
     print("            *   **            **   *                ")
@@ -15,7 +40,8 @@ def desenha_caveira():
     print("            *     ************     *                ")
     print("            *                      *                ")
     print("             **********************                 ")
-def desenha(erros):
+    
+def desenha_forca(erros):
     if erros == 0:
         print()
         print("  |-------|")
@@ -131,7 +157,7 @@ print('*********************************')
 
 
 while(not acertou and not enforcou) :
-    desenha(erros)
+    desenha_forca(erros)
     print("\n\n",letras_acertadas, "\n")
     chute = input("Digite uma letra: ")
 
@@ -148,12 +174,12 @@ while(not acertou and not enforcou) :
     acertou = "_" not in letras_acertadas
     enforcou = erros == 6
 
+desenha_forca(erros)
 if(acertou):
-    desenha(erros)
     print('Você ganhou!!')
     print("Fim de jogo!")
+    desenha_trofeu()
 else:
-    desenha(erros)
     print('Você perdeu!!')
     print("Fim de jogo!")
     desenha_caveira()
